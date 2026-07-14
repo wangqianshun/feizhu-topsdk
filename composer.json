@@ -1,0 +1,12 @@
+{
+  "name": "rrzu/feizhu-topsdk",
+  "description": "飞猪开放平台 SDK",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "RRZU\\Feizhu\\": "src/"
+    }
+  },
+  "require": {},
+  "version": "1.0.0"
+}
