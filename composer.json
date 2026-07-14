@@ -4,7 +4,7 @@
   "type": "library",
   "autoload": {
     "psr-4": {
-      "RRZU\\FeiZhuTopSdk\\": "src/"
+      "FeiZhu\\TopSdk\\": "src/"
     }
   },
   "require": {},
