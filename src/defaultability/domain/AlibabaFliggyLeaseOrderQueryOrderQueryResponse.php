@@ -238,6 +238,46 @@ class AlibabaFliggyLeaseOrderQueryOrderQueryResponse {
      **/
     public $ship_logistics_no;
 
+    /**
+        账期总期数（长租，租金分期期数）
+     **/
+    public $total_periods;
+
+    /**
+        订单逾期违约金（订单级，单位：分，长租）
+     **/
+    public $order_overdue_penalty;
+
+    /**
+        订单逾期违约金交易流水号（长租）
+     **/
+    public $order_overdue_penalty_transaction_id;
+
+    /**
+        账期逾期期数合计（长租）
+     **/
+    public $period_overdue_count;
+
+    /**
+        账期逾期金额合计（租金未付+有效违约金未付，单位：分，长租）
+     **/
+    public $period_un_paid_rent;
+
+    /**
+        账期违约金合计（有效违约金，单位：分，长租）
+     **/
+    public $period_penalty_total;
+
+    /**
+        账单列表（长租，按期序升序）
+     **/
+    public $bill_list;
+
+    /**
+        长租订单总金额（首月优惠后全期租金合计，首期按优惠后实付计，不含押金/增值服务费/违约金，单位：分，短租为空）
+     **/
+    public $long_term_total_price;
+
 
     public function getOrderId() : string{
         return $this->order_id;
@@ -613,6 +653,70 @@ class AlibabaFliggyLeaseOrderQueryOrderQueryResponse {
 
     public function setShipLogisticsNo(string $shipLogisticsNo){
         $this->ship_logistics_no = $shipLogisticsNo;
+    }
+
+    public function getTotalPeriods() : int{
+        return $this->total_periods;
+    }
+
+    public function setTotalPeriods(int $totalPeriods){
+        $this->total_periods = $totalPeriods;
+    }
+
+    public function getOrderOverduePenalty() : int{
+        return $this->order_overdue_penalty;
+    }
+
+    public function setOrderOverduePenalty(int $orderOverduePenalty){
+        $this->order_overdue_penalty = $orderOverduePenalty;
+    }
+
+    public function getOrderOverduePenaltyTransactionId() : string{
+        return $this->order_overdue_penalty_transaction_id;
+    }
+
+    public function setOrderOverduePenaltyTransactionId(string $orderOverduePenaltyTransactionId){
+        $this->order_overdue_penalty_transaction_id = $orderOverduePenaltyTransactionId;
+    }
+
+    public function getPeriodOverdueCount() : int{
+        return $this->period_overdue_count;
+    }
+
+    public function setPeriodOverdueCount(int $periodOverdueCount){
+        $this->period_overdue_count = $periodOverdueCount;
+    }
+
+    public function getPeriodUnPaidRent() : int{
+        return $this->period_un_paid_rent;
+    }
+
+    public function setPeriodUnPaidRent(int $periodUnPaidRent){
+        $this->period_un_paid_rent = $periodUnPaidRent;
+    }
+
+    public function getPeriodPenaltyTotal() : int{
+        return $this->period_penalty_total;
+    }
+
+    public function setPeriodPenaltyTotal(int $periodPenaltyTotal){
+        $this->period_penalty_total = $periodPenaltyTotal;
+    }
+
+    public function getBillList() : array{
+        return $this->bill_list;
+    }
+
+    public function setBillList(array $billList){
+        $this->bill_list = $billList;
+    }
+
+    public function getLongTermTotalPrice() : int{
+        return $this->long_term_total_price;
+    }
+
+    public function setLongTermTotalPrice(int $longTermTotalPrice){
+        $this->long_term_total_price = $longTermTotalPrice;
     }
 
 

@@ -4,7 +4,7 @@ namespace FeiZhu\TopSdk\Defaultability\Domain;
 class AlibabaFliggyLeaseItemAddLogisticsInfoDto {
 
     /**
-        发货地，若多仓发货请传：多仓发货
+        发货地
      **/
     public $shipping_location;
 

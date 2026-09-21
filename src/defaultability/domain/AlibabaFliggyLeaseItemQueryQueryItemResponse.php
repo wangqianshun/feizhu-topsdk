@@ -94,6 +94,16 @@ class AlibabaFliggyLeaseItemQueryQueryItemResponse {
     public $support_buyout;
 
     /**
+        是否支持自动续租（仅长租商品）
+     **/
+    public $support_auto_renewal;
+
+    /**
+        是否计算逾期还款违约金（仅长租商品）
+     **/
+    public $cal_pay_overdue_penalty;
+
+    /**
         最早起租日，T日下单最早T+N
      **/
     public $earliest_start_date;
@@ -296,6 +306,22 @@ class AlibabaFliggyLeaseItemQueryQueryItemResponse {
 
     public function setSupportBuyout(bool $supportBuyout){
         $this->support_buyout = $supportBuyout;
+    }
+
+    public function getSupportAutoRenewal() : bool{
+        return $this->support_auto_renewal;
+    }
+
+    public function setSupportAutoRenewal(bool $supportAutoRenewal){
+        $this->support_auto_renewal = $supportAutoRenewal;
+    }
+
+    public function getCalPayOverduePenalty() : bool{
+        return $this->cal_pay_overdue_penalty;
+    }
+
+    public function setCalPayOverduePenalty(bool $calPayOverduePenalty){
+        $this->cal_pay_overdue_penalty = $calPayOverduePenalty;
     }
 
     public function getEarliestStartDate() : int{

@@ -63,6 +63,36 @@ class AlibabaFliggyLeaseItemQueryQuerySkuDto {
      **/
     public $sku_property;
 
+    /**
+        内存/套餐名称（仅长租商品）
+     **/
+    public $package_name;
+
+    /**
+        首月租金优惠（仅长租商品）
+     **/
+    public $first_month_rent_discount;
+
+    /**
+        官网价，单位分（仅长租商品）
+     **/
+    public $official_price;
+
+    /**
+        买断价格，单位分（仅长租商品）
+     **/
+    public $buy_out_price;
+
+    /**
+        续租方案列表（仅长租商品）
+     **/
+    public $renewal_plan_list;
+
+    /**
+        增值服务列表（仅长租商品）
+     **/
+    public $extra_service_list;
+
 
     public function getSkuId() : int{
         return $this->sku_id;
@@ -158,6 +188,54 @@ class AlibabaFliggyLeaseItemQueryQuerySkuDto {
 
     public function setSkuProperty(string $skuProperty){
         $this->sku_property = $skuProperty;
+    }
+
+    public function getPackageName() : string{
+        return $this->package_name;
+    }
+
+    public function setPackageName(string $packageName){
+        $this->package_name = $packageName;
+    }
+
+    public function getFirstMonthRentDiscount() : AlibabaFliggyLeaseItemQueryFirstMonthRentDiscountDto{
+        return $this->first_month_rent_discount;
+    }
+
+    public function setFirstMonthRentDiscount(AlibabaFliggyLeaseItemQueryFirstMonthRentDiscountDto $firstMonthRentDiscount){
+        $this->first_month_rent_discount = $firstMonthRentDiscount;
+    }
+
+    public function getOfficialPrice() : int{
+        return $this->official_price;
+    }
+
+    public function setOfficialPrice(int $officialPrice){
+        $this->official_price = $officialPrice;
+    }
+
+    public function getBuyOutPrice() : int{
+        return $this->buy_out_price;
+    }
+
+    public function setBuyOutPrice(int $buyOutPrice){
+        $this->buy_out_price = $buyOutPrice;
+    }
+
+    public function getRenewalPlanList() : array{
+        return $this->renewal_plan_list;
+    }
+
+    public function setRenewalPlanList(array $renewalPlanList){
+        $this->renewal_plan_list = $renewalPlanList;
+    }
+
+    public function getExtraServiceList() : array{
+        return $this->extra_service_list;
+    }
+
+    public function setExtraServiceList(array $extraServiceList){
+        $this->extra_service_list = $extraServiceList;
     }
 
 
